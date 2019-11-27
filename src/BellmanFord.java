@@ -8,7 +8,24 @@
  */
 public class BellmanFord {
 	
+	private int[][] tree;	
 	private double[][] U_n;
+	private boolean negativeCycle;
+	
+	public BellmanFord(Graph g) {
+		
+		U_n = bellman(g);
+		tree = tree(g);
+		
+		for(int i = 0; i < U_n.length; i++) {
+			for(int j = 0; j < U_n.length; j++) {
+				
+				if(U_n[i][j] < 0)
+					negativeCycle = true;
+			}
+			
+		}
+	}
 	
 	/**
 	 * This getter method provides the Bellman-Ford Matrix U.
@@ -21,8 +38,6 @@ public class BellmanFord {
 			throw new IllegalArgumentException("Negative Cycles!");
 		return U_n;
 	}
-	
-	private int[][] tree;
 	
 	/**
 	 * This getter method provides the Tree-Matrix tree.
@@ -84,25 +99,6 @@ public class BellmanFord {
 		
 		return new Graph(0);
 	}
-	
-
-	public BellmanFord(Graph g) {
-		
-		U_n = bellman(g);
-		tree = tree(g);
-		
-		for(int i = 0; i < U_n.length; i++) {
-			for(int j = 0; j < U_n.length; j++) {
-				
-				if(U_n[i][j] < 0)
-					negativeCycle = true;
-			}
-			
-		}
-	}
-	
-	
-	private boolean negativeCycle;
 	
 	public double[][] bellman(Graph g){
 		
