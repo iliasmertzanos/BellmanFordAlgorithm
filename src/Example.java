@@ -54,58 +54,6 @@ public class Example {
         
         doManyThings(graph); 
 
-      /*  System.out.println("\n============= 3rd example ==============");
-        
-        graph = new Graph(7);
-        graph.addEdge(0, 1, 1);
-        graph.addEdge(0, 5, 2);
-        graph.addEdge(1, 2, 2);        
-        graph.addEdge(1,3,5);
-        graph.addEdge(1,5,3);
-        graph.addEdge(1,0,0);
-        graph.addEdge(2,3,2);
-        graph.addEdge(2,5,1);
-        graph.addEdge(3,4,-1);
-        graph.addEdge(3,6,4);
-        graph.addEdge(4,3,1);
-        graph.addEdge(4,6,0);
-        graph.addEdge(4,5,-1);
-        graph.addEdge(5,0,2);
-        graph.addEdge(5,1,3);
-        graph.addEdge(5,2,0);
-        //doManyThings(graph); */
-
-    /*    System.out.println("\n============= 4th example ==============");
-        
-        // veraendere den Graph aus dem 3. Beispiel        
-        
-        try {
-	    System.out.println("\nWir veraendern den Graph aus dem dritten Beispiel ...");
-        System.out.println("------------- Example 4A ---------------");
-	    graph.addEdge(5, 2, -1); // (5, 2) gibt es schon, so geht das also nicht!
-        } catch (Exception e) {
-	    System.out.println(e);
-        }
-	System.out.println("\n... wir veraendern ihn nochmal ...");
-        System.out.println("------------- Example 4B ---------------");
-        graph.setWeight(5,2,-1); // das geht, nun gibt es aber einen negativen Kreis.
-        
-        try {
-	    doManyThings(graph);
-        } catch (Exception e) {
-	    System.out.println(e);
-	}
-        
-        try {
-	    System.out.println("\n... und wir veraendern ihn ein letztes Mal ...");
-        System.out.println("------------- Example 4C ---------------");
-	    graph.removeEdge(5,2);
-	    graph.removeEdge(3,4);
-	    graph.removeEdge(4,5);
-	    doManyThings(graph);
-        } catch (Exception e) {
-	    System.out.println(e);
-	} */
     }
 
 	
@@ -114,14 +62,8 @@ public class Example {
 	 * @param graph The graph to work with.
 	 */
 	
-    public static void doManyThings(Graph graph) {        
-		
-		
-		
-	    // FIXME
-	    // Eventuell muesst ihr das an eure Klasse ein bisschen anpassen,
-	    // wenn eure Methoden anders aufgerufen werden.
-	
+    public static void doManyThings(Graph graph) {     
+    	
 	    System.out.println("Example for what can be done. First, the graph:");
 	    System.out.println(graph);
          
@@ -130,17 +72,10 @@ public class Example {
 	    
 	    System.out.println("Done. Here are the distances");         
 	    printMatrix(bf.getDistances());
-	    	/*System.out.println("Some single distances:");
-	    	System.out.println("From 0 to 3: " + bf.getDistance(0,3));
-	    	System.out.println("From 1 to 3: " + bf.getDistance(1,3));
-	    	System.out.println("From 2 to 3: " + bf.getDistance(2,3));*/
+	    
 	    System.out.println("Here are the tree variables");                 
 	    printMatrix(bf.getTree());        
-	    /*
-	    System.out.println("This is a shortest path tree for vertex 0:");
-	    Graph tree = bf.getShortestPathTree(0);
-	    System.out.println(tree);
-        */
+	    
 	    System.out.println("The shortest paths from vertex 0 to the other vertices are:");
         
 	    for (int i = 0; i < graph.getNumberOfNodes(); i++) {
