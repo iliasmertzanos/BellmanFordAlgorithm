@@ -2,8 +2,6 @@
  * This class analyzes a graph of class Graph. It evaluates 
  * with the Bellman-Ford-Algorithm the matrix U_n and the 
  * tree-Matrix.
- * 
- * @author Marco
  *
  */
 public class BellmanFord {
