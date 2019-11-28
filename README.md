@@ -15,3 +15,7 @@ The class `Graph` is in the src folder to be found, which implements a directed 
 
 For specific information see the source code comments. 
 For german speakers see also the task description in the src folder.
+
+If you want learn how it works by playing around I recomment this applet here:
+
+https://www-m9.ma.tum.de/graph-algorithms/spp-bellman-ford/index_en.html
