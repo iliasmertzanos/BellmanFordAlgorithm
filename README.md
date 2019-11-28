@@ -11,7 +11,7 @@ In the package the constructor of the class `BellmanFord` takes as argument a Gr
 
 Once the constructor `public BellmanFord(Graph g)` has been invoked then the method `int[] getShortestPath(int v, int w) throws IllegalArgumentException` can determine the sortest path returning an array with all the nodes.
 
-The class `Graph` is in the src folder to be found, which implements a directed Grap and doesn't allows parallel edges and self-loops.
+The class `Graph` is in the src folder to be found, which implements a directed Grap and doesn't allows any self-loops.
 
 For specific information see the source code comments. 
 For german speakers see also the task description in the src folder.
